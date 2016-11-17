@@ -1,0 +1,40 @@
+{
+  "name": "sc2balance",
+  "version": "1.0.0",
+  "description": "Starcraft 2 NotD:SO balance testing utility",
+  "main": "./static/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMalyugin/sc2balance.git"
+  },
+  "keywords": [
+    "starcraft",
+    "balance",
+    "notd",
+    "spec",
+    "ops"
+  ],
+  "author": "IvanX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IMalyugin/sc2balance/issues"
+  },
+  "homepage": "https://github.com/IMalyugin/sc2balance#readme",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "node-sass": "^3.13.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  },
+}
