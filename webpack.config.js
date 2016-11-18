@@ -1,12 +1,14 @@
 var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+		app: './src/app.js',
+	},
   output: {
     path: './static',
-    filename: 'app.js',
-		library: "app",
-		libraryTarget: "umd",
+    filename: '[name].js',
+		library: "App",
     publicPath: ''
   },
   module: {
@@ -26,5 +28,10 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+	plugins: [
+		new webpack.ProvidePlugin({
+			React: 'react'
+		})
+	]
 }

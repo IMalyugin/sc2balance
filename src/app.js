@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import Root from "./components/Root/Root.jsx";
+import {Root} from "./components/exports";
 import "./app.scss";
 
-export default function Init(container) {
+export function init(container) {
 	ReactDOM.render(<Root />, container);
 }
