@@ -7,12 +7,12 @@ const DSS_Spawner = function(SoftFactor, HardFactor, team, wave) {
 		ExpFactor += team[i];
 	}
 	var averageRank = ExpFactor / team.length;
-	var ExpFactor = (4.0 + averageRank) / 10;
+	var ExpFactor = (4.0 + averageRank) / 10.;
 
-	var TeamFactorData = [0.4, 0.4, 0.5, 0.65, 0.8, 1.0, 1.1, 1.2, 1.3, 1.4]
+	var TeamFactorData = [0.6, 0.6, 0.6, 0.7, 0.8, 1.0, 1.2, 1.3, 1.37, 1.42]
 	var TeamFactor = TeamFactorData[team.length-1];
 
-	var WaveFactor = (4 + wave) / 7.;
+	var WaveFactor = (4. + wave) / 7.;
 
 
 	if(wave >= 10) {
@@ -23,8 +23,8 @@ const DSS_Spawner = function(SoftFactor, HardFactor, team, wave) {
 		WaveFactor = 1.3 * WaveFactor;
 	}
 
-	var BaseExpFactor = (averageRank) / 7;
-	var BaseExpFactor = Math.max(averageRank - 3, 0) / 7;
+	var BaseExpFactor = (averageRank) / 7.;
+	var BaseExpFactor = Math.max(averageRank - 3., 0.) / 7.;
 
 	var BaseDifficultyFactor = BaseExpFactor * TeamFactor * SoftFactor;
 	var BaseWaveFactor = WaveFactor * ExpFactor * TeamFactor * SoftFactor;

@@ -56,9 +56,9 @@ var App =
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _exports = __webpack_require__(185);
+	var _exports = __webpack_require__(178);
 
-	__webpack_require__(179);
+	__webpack_require__(186);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21497,17 +21497,538 @@ var App =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 178 */,
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Root = __webpack_require__(179);
+
+	Object.defineProperty(exports, "Root", {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_Root).default;
+	  }
+	});
+
+	var _TestRow = __webpack_require__(184);
+
+	Object.defineProperty(exports, "TestRow", {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_TestRow).default;
+	  }
+	});
+
+	var _TestCell = __webpack_require__(185);
+
+	Object.defineProperty(exports, "TestCell", {
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_TestCell).default;
+	  }
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
 /* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	exports.default = function (props) {
+		return React.createElement(
+			"table",
+			{ cellSpacing: "0", className: "balance-table" },
+			React.createElement(
+				"thead",
+				null,
+				React.createElement(
+					"tr",
+					null,
+					React.createElement(
+						"th",
+						null,
+						"Team \\ Wave"
+					),
+					_oldWaveData2.default.map(function (wave, idx) {
+						return React.createElement(
+							"td",
+							{ key: idx },
+							wave.name
+						);
+					})
+				)
+			),
+			_tests2.default.map(function (_ref, idx) {
+				var name = _ref.name,
+				    team = _ref.team;
+
+				return [React.createElement(_exports.TestRow, { key: idx + "_1", waves: _oldWaveData2.default, name: "old" + name, team: team }), React.createElement(_exports.TestRow, { key: idx + "_2", newRow: true, waves: _newWaveData2.default, name: "new" + name, team: team })];
+			})
+		);
+	};
+
+	var _tests = __webpack_require__(180);
+
+	var _tests2 = _interopRequireDefault(_tests);
+
+	var _oldWaveData = __webpack_require__(181);
+
+	var _oldWaveData2 = _interopRequireDefault(_oldWaveData);
+
+	var _newWaveData = __webpack_require__(183);
+
+	var _newWaveData2 = _interopRequireDefault(_newWaveData);
+
+	var _exports = __webpack_require__(178);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 180 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = [{
+		name: 'NoobSamurai',
+		team: [0]
+	}, {
+		name: 'Vets',
+		team: [10, 11, 12, 12, 11, 15]
+	}, {
+		name: 'VetsL',
+		team: [10, 11, 13, 12, 12, 15, 10, 9, 12, 11]
+	}, {
+		name: 'VetsS',
+		team: [10, 11, 13, 12]
+	}, {
+		name: 'Noobs',
+		team: [0, 1, 2, 2, 1, 5]
+	}, {
+		name: 'NoobsL',
+		team: [0, 1, 3, 2, 2, 5, 0, 2, 2, 1]
+	}, {
+		name: 'NoobsS',
+		team: [0, 1, 3, 2]
+	}, {
+		name: 'Mids',
+		team: [5, 6, 6, 6, 4, 9]
+	}, {
+		name: 'MidsL',
+		team: [5, 7, 3, 10, 5, 6, 4, 6, 8, 9]
+	}, {
+		name: 'MidsS',
+		team: [5, 7, 6, 6]
+	}, {
+		name: 'Mix',
+		team: [0, 2, 4, 14, 15, 13]
+	}, {
+		name: 'MixL',
+		team: [0, 2, 1, 5, 2, 13, 14, 15, 13, 14]
+	}, {
+		name: 'MixWeak',
+		team: [1, 2, 15, 14]
+	}, {
+		name: 'NoobMix',
+		team: [0, 1, 2, 2, 1, 15]
+	}, {
+		name: 'NoobMixL',
+		team: [0, 1, 3, 2, 2, 5, 0, 2, 2, 15]
+	}, {
+		name: 'NoobMixS',
+		team: [0, 1, 3, 15]
+	}, {
+		name: 'VetMix',
+		team: [0, 1, 11, 13, 14, 15]
+	}, {
+		name: 'VetMixL',
+		team: [0, 1, 3, 1, 15, 13, 12, 14, 12, 15]
+	}, {
+		name: 'VetMixS',
+		team: [2, 13, 13, 15]
+	}];
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _rankData = __webpack_require__(182);
+
+	var _rankData2 = _interopRequireDefault(_rankData);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var data = [];
+
+	var DSS_Spawner = function DSS_Spawner(WaveValue, main, team, wave) {
+		var TeamExp = 0;
+		for (var i = 0; i < team.length; i++) {
+			TeamExp += _rankData2.default[team[i]];
+		}
+
+		var ExpFactor = TeamExp / (main ? 1000 : 2000);
+		WaveValue = WaveValue + ExpFactor;
+
+		if (wave >= 10) {
+			WaveValue = parseInt(1.1 * WaveValue);
+		} else if (wave >= 12) {
+			WaveValue = parseInt(1.2 * WaveValue);
+		} else if (wave >= 14) {
+			WaveValue = parseInt(1.3 * WaveValue);
+		}
+		return parseInt(0.9 * WaveValue);
+	};
+
+	var DSS_AdditionalSpawner = function DSS_AdditionalSpawner(team, wave) {
+		// var unburrow = wave * 3 * team.length;
+		var WaveValue = wave * 30 + team.length * wave * 5 + team.length * 15;
+		return DSS_Spawner(WaveValue, false, team, wave); // + unburrow;
+	};
+
+	var DSS_ForceSpawner = function DSS_ForceSpawner(WaveValue, team, wave) {
+		var TeamExp = 0;
+		for (var i = 0; i < team.length; i++) {
+			TeamExp += _rankData2.default[team[i]];
+		}
+
+		var ExpFactor = TeamExp / 1000;
+		WaveValue = WaveValue + ExpFactor;
+
+		return parseInt(0.9 * WaveValue);
+	};
+
+	var _loop = function _loop(i) {
+		data.push({
+			name: 'W' + i,
+			power: function power(team) {
+				var wave = i;
+				return DSS_Spawner(wave * 150 + team.length * wave * 6 + team.length * 25, true, team, wave);
+			}
+		});
+		data.push({
+			name: 'W' + i + '+',
+			power: function power(team) {
+				var wave = i;
+				return DSS_Spawner(wave * 30 + team.length * wave * 5 + team.length * 15, false, team, wave);
+			}
+		});
+	};
+
+	for (var i = 1; i <= 20; i += 2) {
+		_loop(i);
+	}
+
+	data.push({
+		name: 'Hatch',
+		power: function power(team) {
+			var wave = 6;
+			return DSS_ForceSpawner(wave * 210 + team.length * wave * 5 + team.length * 10 + 60, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Bunker',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_ForceSpawner(wave * 140 + team.length * wave * 5 + team.length * 40, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Bunker+',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_ForceSpawner(wave * 120 + team.length * wave * 5 + team.length * 35 + 750, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Exodus',
+		power: function power(team) {
+			var wave = 14;
+			return DSS_ForceSpawner(wave * 180 + team.length * wave * 5 + team.length * 50 + 75, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Parts',
+		power: function power(team) {
+			var wave = 17;
+			return DSS_ForceSpawner(wave * 140 + team.length * wave * 5 + team.length * 40 + 300, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Evac',
+		power: function power(team) {
+			var wave = 19;
+			return DSS_ForceSpawner(wave * 170 + team.length * wave * 5 + team.length * 50 + 75, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Crit',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_ForceSpawner(10000, team, wave) + 210 * 20;
+		}
+	});
+
+	exports.default = data;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+			value: true
+	});
+	exports.default = [0, // 0
+	500, // 1
+	1000, // 2
+	2000, // 3
+	4000, // 4
+	8000, // 5
+	16000, // 6
+	32000, // 7
+	60000, // 8
+	100000, // 9
+	150000, // 10
+	225000, // 11
+	360000, // 12
+	480000, // 13
+	650000, // 14
+	800000];
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _rankData = __webpack_require__(182);
+
+	var _rankData2 = _interopRequireDefault(_rankData);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var data = [];
+
+	var DSS_Spawner = function DSS_Spawner(SoftFactor, HardFactor, team, wave) {
+		var ExpFactor = 0;
+		for (var i = 0; i < team.length; i++) {
+			ExpFactor += team[i];
+		}
+		var averageRank = ExpFactor / team.length;
+		var ExpFactor = (4.0 + averageRank) / 10.;
+
+		var TeamFactorData = [0.6, 0.6, 0.6, 0.7, 0.8, 1.0, 1.2, 1.3, 1.37, 1.42];
+		var TeamFactor = TeamFactorData[team.length - 1];
+
+		var WaveFactor = (4. + wave) / 7.;
+
+		if (wave >= 10) {
+			WaveFactor = 1.1 * WaveFactor;
+		} else if (wave >= 12) {
+			WaveFactor = 1.2 * WaveFactor;
+		} else if (wave >= 14) {
+			WaveFactor = 1.3 * WaveFactor;
+		}
+
+		var BaseExpFactor = averageRank / 7.;
+		var BaseExpFactor = Math.max(averageRank - 3., 0.) / 7.;
+
+		var BaseDifficultyFactor = BaseExpFactor * TeamFactor * SoftFactor;
+		var BaseWaveFactor = WaveFactor * ExpFactor * TeamFactor * SoftFactor;
+		var ScalableWaveFactor = WaveFactor * HardFactor;
+
+		var WaveValue = 1000 * (BaseDifficultyFactor + BaseWaveFactor + ScalableWaveFactor);
+
+		return parseInt(0.9 * WaveValue);
+	};
+
+	var _loop = function _loop(i) {
+		data.push({
+			name: 'W' + i,
+			power: function power(team) {
+				var wave = i;
+				return DSS_Spawner(0.8, 0.2, team, wave);
+			}
+		});
+		data.push({
+			name: 'W' + i + '+',
+			power: function power(team) {
+				var wave = i;
+				return DSS_Spawner(0.45, 0, team, wave);
+			}
+		});
+	};
+
+	for (var i = 1; i <= 20; i += 2) {
+		_loop(i);
+	}
+
+	data.push({
+		name: 'Hatch',
+		power: function power(team) {
+			var wave = 6;
+			return DSS_Spawner(0.8, 0.5, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Bunker',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_Spawner(0.9, 0.1, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Bunker+',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_Spawner(0.7, 0.3, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Exodus',
+		power: function power(team) {
+			var wave = 14;
+			return DSS_Spawner(1.0, 0.2, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Parts',
+		power: function power(team) {
+			var wave = 17;
+			return DSS_Spawner(0.5, 0, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Evac',
+		power: function power(team) {
+			var wave = 19;
+			return DSS_Spawner(0.8, 0.5, team, wave);
+		}
+	});
+
+	data.push({
+		name: 'Crit',
+		power: function power(team) {
+			var wave = 12;
+			return DSS_Spawner(1.5, 0.5, team, wave) + 210 * 20;
+		}
+	});
+
+	exports.default = data;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	exports.default = function (props) {
+		var name = props.name,
+		    team = props.team,
+		    newRow = props.newRow,
+		    waves = props.waves;
+
+		return React.createElement(
+			"tr",
+			{ className: newRow ? "new-row" : null },
+			React.createElement(
+				"th",
+				null,
+				React.createElement(
+					"a",
+					{ title: team.join(",") },
+					name
+				)
+			),
+			waves.map(function (wave, idx) {
+				return React.createElement(_exports.TestCell, { key: idx, wave: wave, team: team });
+			})
+		);
+	};
+
+	var _tests = __webpack_require__(180);
+
+	var _tests2 = _interopRequireDefault(_tests);
+
+	var _exports = __webpack_require__(178);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	exports.default = function (props) {
+		var wave = props.wave,
+		    team = props.team;
+
+		return React.createElement(
+			"td",
+			null,
+			wave.power(team)
+		);
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(180);
+	var content = __webpack_require__(187);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(182)(content, {});
+	var update = __webpack_require__(189)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -21524,10 +22045,10 @@ var App =
 	}
 
 /***/ },
-/* 180 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(181)();
+	exports = module.exports = __webpack_require__(188)();
 	// imports
 
 
@@ -21538,7 +22059,7 @@ var App =
 
 
 /***/ },
-/* 181 */
+/* 188 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21593,7 +22114,7 @@ var App =
 	};
 
 /***/ },
-/* 182 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -21843,525 +22364,6 @@ var App =
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 183 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = [{
-		name: 'Vets',
-		team: [10, 11, 12, 12, 11, 15]
-	}, {
-		name: 'VetsL',
-		team: [10, 11, 13, 12, 12, 15, 10, 9, 12, 11]
-	}, {
-		name: 'VetsS',
-		team: [10, 11, 13, 12]
-	}, {
-		name: 'Noobs',
-		team: [0, 1, 2, 2, 1, 5]
-	}, {
-		name: 'NoobsL',
-		team: [0, 1, 3, 2, 2, 5, 0, 2, 2, 1]
-	}, {
-		name: 'NoobsS',
-		team: [0, 1, 3, 2]
-	}, {
-		name: 'Mids',
-		team: [5, 6, 6, 6, 4, 9]
-	}, {
-		name: 'MidsL',
-		team: [5, 7, 3, 10, 5, 6, 4, 6, 8, 9]
-	}, {
-		name: 'MidsS',
-		team: [5, 7, 6, 6]
-	}, {
-		name: 'Mix',
-		team: [0, 2, 4, 14, 15, 13]
-	}, {
-		name: 'MixL',
-		team: [0, 2, 1, 5, 2, 13, 14, 15, 13, 14]
-	}, {
-		name: 'MixWeak',
-		team: [1, 2, 15, 14]
-	}, {
-		name: 'NoobMix',
-		team: [0, 1, 2, 2, 1, 15]
-	}, {
-		name: 'NoobMixL',
-		team: [0, 1, 3, 2, 2, 5, 0, 2, 2, 15]
-	}, {
-		name: 'NoobMixS',
-		team: [0, 1, 3, 15]
-	}, {
-		name: 'VetMix',
-		team: [0, 1, 11, 13, 14, 15]
-	}, {
-		name: 'VetMixL',
-		team: [0, 1, 3, 1, 15, 13, 12, 14, 12, 15]
-	}, {
-		name: 'VetMixS',
-		team: [2, 13, 13, 15]
-	}];
-
-/***/ },
-/* 184 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	exports.default = function (props) {
-		return React.createElement(
-			"table",
-			{ cellSpacing: "0", className: "balance-table" },
-			React.createElement(
-				"thead",
-				null,
-				React.createElement(
-					"tr",
-					null,
-					React.createElement(
-						"th",
-						null,
-						"Team \\ Wave"
-					),
-					_oldWaveData2.default.map(function (wave, idx) {
-						return React.createElement(
-							"td",
-							{ key: idx },
-							wave.name
-						);
-					})
-				)
-			),
-			_tests2.default.map(function (_ref, idx) {
-				var name = _ref.name,
-				    team = _ref.team;
-
-				return [React.createElement(_exports.TestRow, { key: idx + "_1", waves: _oldWaveData2.default, name: "old" + name, team: team }), React.createElement(_exports.TestRow, { key: idx + "_2", newRow: true, waves: _newWaveData2.default, name: "new" + name, team: team })];
-			})
-		);
-	};
-
-	var _tests = __webpack_require__(183);
-
-	var _tests2 = _interopRequireDefault(_tests);
-
-	var _oldWaveData = __webpack_require__(188);
-
-	var _oldWaveData2 = _interopRequireDefault(_oldWaveData);
-
-	var _newWaveData = __webpack_require__(189);
-
-	var _newWaveData2 = _interopRequireDefault(_newWaveData);
-
-	var _exports = __webpack_require__(185);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
-/* 185 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Root = __webpack_require__(184);
-
-	Object.defineProperty(exports, "Root", {
-	  enumerable: true,
-	  get: function get() {
-	    return _interopRequireDefault(_Root).default;
-	  }
-	});
-
-	var _TestRow = __webpack_require__(186);
-
-	Object.defineProperty(exports, "TestRow", {
-	  enumerable: true,
-	  get: function get() {
-	    return _interopRequireDefault(_TestRow).default;
-	  }
-	});
-
-	var _TestCell = __webpack_require__(187);
-
-	Object.defineProperty(exports, "TestCell", {
-	  enumerable: true,
-	  get: function get() {
-	    return _interopRequireDefault(_TestCell).default;
-	  }
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ },
-/* 186 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	exports.default = function (props) {
-		var name = props.name,
-		    team = props.team,
-		    newRow = props.newRow,
-		    waves = props.waves;
-
-		return React.createElement(
-			"tr",
-			{ className: newRow ? "new-row" : null },
-			React.createElement(
-				"th",
-				null,
-				React.createElement(
-					"a",
-					{ title: team.join(",") },
-					name
-				)
-			),
-			waves.map(function (wave, idx) {
-				return React.createElement(_exports.TestCell, { key: idx, wave: wave, team: team });
-			})
-		);
-	};
-
-	var _tests = __webpack_require__(183);
-
-	var _tests2 = _interopRequireDefault(_tests);
-
-	var _exports = __webpack_require__(185);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
-/* 187 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	exports.default = function (props) {
-		var wave = props.wave,
-		    team = props.team;
-
-		return React.createElement(
-			"td",
-			null,
-			wave.power(team)
-		);
-	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _rankData = __webpack_require__(190);
-
-	var _rankData2 = _interopRequireDefault(_rankData);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var data = [];
-
-	var DSS_Spawner = function DSS_Spawner(WaveValue, main, team, wave) {
-		var TeamExp = 0;
-		for (var i = 0; i < team.length; i++) {
-			TeamExp += _rankData2.default[team[i]];
-		}
-
-		var ExpFactor = TeamExp / (main ? 1000 : 2000);
-		WaveValue = WaveValue + ExpFactor;
-
-		if (wave >= 10) {
-			WaveValue = parseInt(1.1 * WaveValue);
-		} else if (wave >= 12) {
-			WaveValue = parseInt(1.2 * WaveValue);
-		} else if (wave >= 14) {
-			WaveValue = parseInt(1.3 * WaveValue);
-		}
-		return parseInt(0.9 * WaveValue);
-	};
-
-	var DSS_AdditionalSpawner = function DSS_AdditionalSpawner(team, wave) {
-		// var unburrow = wave * 3 * team.length;
-		var WaveValue = wave * 30 + team.length * wave * 5 + team.length * 15;
-		return DSS_Spawner(WaveValue, false, team, wave); // + unburrow;
-	};
-
-	var DSS_ForceSpawner = function DSS_ForceSpawner(WaveValue, team, wave) {
-		var TeamExp = 0;
-		for (var i = 0; i < team.length; i++) {
-			TeamExp += _rankData2.default[team[i]];
-		}
-
-		var ExpFactor = TeamExp / 1000;
-		WaveValue = WaveValue + ExpFactor;
-
-		return parseInt(0.9 * WaveValue);
-	};
-
-	var _loop = function _loop(i) {
-		data.push({
-			name: 'W' + i,
-			power: function power(team) {
-				var wave = i;
-				return DSS_Spawner(wave * 150 + team.length * wave * 6 + team.length * 25, true, team, wave);
-			}
-		});
-		data.push({
-			name: 'W' + i + '+',
-			power: function power(team) {
-				var wave = i;
-				return DSS_Spawner(wave * 30 + team.length * wave * 5 + team.length * 15, false, team, wave);
-			}
-		});
-	};
-
-	for (var i = 1; i <= 20; i += 2) {
-		_loop(i);
-	}
-
-	data.push({
-		name: 'Hatch',
-		power: function power(team) {
-			var wave = 6;
-			return DSS_ForceSpawner(wave * 210 + team.length * wave * 5 + team.length * 10 + 60, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Bunker',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_ForceSpawner(wave * 140 + team.length * wave * 5 + team.length * 40, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Bunker+',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_ForceSpawner(wave * 120 + team.length * wave * 5 + team.length * 35 + 750, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Exodus',
-		power: function power(team) {
-			var wave = 14;
-			return DSS_ForceSpawner(wave * 180 + team.length * wave * 5 + team.length * 50 + 75, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Parts',
-		power: function power(team) {
-			var wave = 17;
-			return DSS_ForceSpawner(wave * 140 + team.length * wave * 5 + team.length * 40 + 300, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Evac',
-		power: function power(team) {
-			var wave = 19;
-			return DSS_ForceSpawner(wave * 170 + team.length * wave * 5 + team.length * 50 + 75, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Crit',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_ForceSpawner(10000, team, wave) + 210 * 20;
-		}
-	});
-
-	exports.default = data;
-
-/***/ },
-/* 189 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _rankData = __webpack_require__(190);
-
-	var _rankData2 = _interopRequireDefault(_rankData);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var data = [];
-
-	var DSS_Spawner = function DSS_Spawner(SoftFactor, HardFactor, team, wave) {
-		var ExpFactor = 0;
-		for (var i = 0; i < team.length; i++) {
-			ExpFactor += team[i];
-		}
-		var averageRank = ExpFactor / team.length;
-		var ExpFactor = (4.0 + averageRank) / 10;
-
-		var TeamFactorData = [0.4, 0.4, 0.5, 0.65, 0.8, 1.0, 1.1, 1.2, 1.3, 1.4];
-		var TeamFactor = TeamFactorData[team.length - 1];
-
-		var WaveFactor = (4 + wave) / 7.;
-
-		if (wave >= 10) {
-			WaveFactor = 1.1 * WaveFactor;
-		} else if (wave >= 12) {
-			WaveFactor = 1.2 * WaveFactor;
-		} else if (wave >= 14) {
-			WaveFactor = 1.3 * WaveFactor;
-		}
-
-		var BaseExpFactor = averageRank / 7;
-		var BaseExpFactor = Math.max(averageRank - 3, 0) / 7;
-
-		var BaseDifficultyFactor = BaseExpFactor * TeamFactor * SoftFactor;
-		var BaseWaveFactor = WaveFactor * ExpFactor * TeamFactor * SoftFactor;
-		var ScalableWaveFactor = WaveFactor * HardFactor;
-
-		var WaveValue = 1000 * (BaseDifficultyFactor + BaseWaveFactor + ScalableWaveFactor);
-
-		return parseInt(0.9 * WaveValue);
-	};
-
-	var _loop = function _loop(i) {
-		data.push({
-			name: 'W' + i,
-			power: function power(team) {
-				var wave = i;
-				return DSS_Spawner(0.8, 0.2, team, wave);
-			}
-		});
-		data.push({
-			name: 'W' + i + '+',
-			power: function power(team) {
-				var wave = i;
-				return DSS_Spawner(0.45, 0, team, wave);
-			}
-		});
-	};
-
-	for (var i = 1; i <= 20; i += 2) {
-		_loop(i);
-	}
-
-	data.push({
-		name: 'Hatch',
-		power: function power(team) {
-			var wave = 6;
-			return DSS_Spawner(0.8, 0.5, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Bunker',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_Spawner(0.9, 0.1, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Bunker+',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_Spawner(0.7, 0.3, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Exodus',
-		power: function power(team) {
-			var wave = 14;
-			return DSS_Spawner(1.0, 0.2, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Parts',
-		power: function power(team) {
-			var wave = 17;
-			return DSS_Spawner(0.5, 0, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Evac',
-		power: function power(team) {
-			var wave = 19;
-			return DSS_Spawner(0.8, 0.5, team, wave);
-		}
-	});
-
-	data.push({
-		name: 'Crit',
-		power: function power(team) {
-			var wave = 12;
-			return DSS_Spawner(1.5, 0.5, team, wave) + 210 * 20;
-		}
-	});
-
-	exports.default = data;
-
-/***/ },
-/* 190 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-			value: true
-	});
-	exports.default = [0, // 0
-	500, // 1
-	1000, // 2
-	2000, // 3
-	4000, // 4
-	8000, // 5
-	16000, // 6
-	32000, // 7
-	60000, // 8
-	100000, // 9
-	150000, // 10
-	225000, // 11
-	360000, // 12
-	480000, // 13
-	650000, // 14
-	800000];
 
 /***/ }
 /******/ ]);

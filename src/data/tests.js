@@ -1,5 +1,9 @@
 export default [
 	{
+		name: 'NoobSamurai',
+		team: [0],
+	},
+	{
 		name: 'Vets',
 		team: [10, 11, 12, 12, 11, 15],
 	},
